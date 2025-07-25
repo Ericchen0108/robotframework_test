@@ -10,10 +10,19 @@ ${BROWSER}              chrome
 ${DELAY}                1
 ${YOUTUBE_URL}          https://www.youtube.com
 ${REST_COUNTRIES_URL}   https://restcountries.com/v3.1
+@{CHROME_ARGS}          --headless
+...                     --no-sandbox
+...                     --disable-gpu
+...                     --disable-extensions
+...                     --disable-web-security
 
 *** Keywords ***
 Open YouTube
-    Open Browser    ${YOUTUBE_URL}    ${BROWSER}
+    ${chrome_options}=    Evaluate    sys.modules['selenium.webdriver'].ChromeOptions()    sys, selenium.webdriver
+    FOR    ${arg}    IN    @{CHROME_ARGS}
+        Call Method    ${chrome_options}    add_argument    ${arg}
+    END
+    Open Browser    ${YOUTUBE_URL}    ${BROWSER}    options=${chrome_options}
     Maximize Browser Window
     Set Selenium Speed    ${DELAY}
 

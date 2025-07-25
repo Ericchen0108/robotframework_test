@@ -2,7 +2,7 @@
 
 > **A comprehensive test automation framework using Robot Framework for API and web UI testing**
 
-[![Tests](https://img.shields.io/badge/tests-27%2F27%20passing-brightgreen)](./tests)
+[![Tests](https://img.shields.io/badge/tests-28%2F28%20passing-brightgreen)](./tests)
 [![Python](https://img.shields.io/badge/python-3.8%2B-blue)](https://python.org)
 [![Robot Framework](https://img.shields.io/badge/robot%20framework-6.1.1-orange)](https://robotframework.org)
 
@@ -44,7 +44,7 @@ Comprehensive testing of the **REST Countries API** covering:
 
 Browser automation testing for:
 
-- **`youtube_homepage.robot`** - Page load verification and content validation
+- **`youtube_homepage.robot`** - Page load verification and search functionality testing
 
 ## 🔧 Prerequisites
 
@@ -107,8 +107,8 @@ pixelbro/
 | Test Type    | Test Cases   | Coverage Areas                                               |
 | ------------ | ------------ | ------------------------------------------------------------ |
 | API Tests    | 26 cases     | CRUD operations, data validation, error handling, edge cases |
-| Web UI Tests | 1 case       | Page loading, content verification                           |
-| **Total**    | **27 cases** | **100% pass rate**                                           |
+| Web UI Tests | 2 cases      | Page loading, search functionality                           |
+| **Total**    | **28 cases** | **100% pass rate**                                           |
 
 ## 🛠️ Built With
 
