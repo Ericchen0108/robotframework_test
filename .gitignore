@@ -1,0 +1,11 @@
+# Python
+__pycache__/
+venv/
+
+# Robot Framework generated files
+output.xml
+log.html
+report.html
+
+# OS
+.DS_Store
